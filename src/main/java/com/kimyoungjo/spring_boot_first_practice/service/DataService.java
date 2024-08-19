@@ -36,4 +36,16 @@ public class DataService {
 
         return dataRepository.save(data);
     }
+
+    // 인증 메서드 추가
+    public boolean authenticate(String username, String password) {
+        Optional<CustomData> user = dataRepository.findByUsername(username);
+
+        if (user.isPresent()) {
+            // 패스워드 비교
+            return user.get().getPassword().equals(password);
+        }
+
+        return false;  // 사용자 없음 또는 비밀번호 불일치
+    }
 }
