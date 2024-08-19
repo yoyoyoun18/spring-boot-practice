@@ -11,9 +11,11 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Data {
+public class CustomData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String content;
+    private String username;
+    private String password;
+    private String email;
 }
