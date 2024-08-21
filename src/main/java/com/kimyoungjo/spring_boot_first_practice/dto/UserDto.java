@@ -20,7 +20,7 @@ public class UserDto {
     @Setter
     @Builder
     public static class Response {
-        private String userId;
+        private Integer userId;
         private String username;
         private String email;
         private LocalDateTime createdAt;

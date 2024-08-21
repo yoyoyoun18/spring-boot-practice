@@ -16,9 +16,9 @@ import java.time.LocalDateTime;
 @Table(name = "comments")
 public class Comment {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comment_id")
-    private String commentId;
+    private Integer commentId;
 
     @ManyToOne // 다대일 관계 명시
     @JoinColumn(name = "post_id", nullable = false)

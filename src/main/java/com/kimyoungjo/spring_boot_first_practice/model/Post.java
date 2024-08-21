@@ -18,9 +18,9 @@ import java.util.List;
 @Table(name = "posts")
 public class Post {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "post_id")
-    private String postId;
+    private Integer postId;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false) // FK 조인
