@@ -1,4 +1,4 @@
 package com.kimyoungjo.spring_boot_first_practice.repository;
 
-public class PostRepository {
+public interface PostRepository {
 }
