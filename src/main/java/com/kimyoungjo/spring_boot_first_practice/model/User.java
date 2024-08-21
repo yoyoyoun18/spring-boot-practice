@@ -19,7 +19,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID) // 유저 고유의 랜덤 난수 id를 만들어주기위해 UUID 채택
     @Column(name = "user_id")
-    private Long userId;
+    private String userId;
 
     @Column(nullable = false, unique = true)
     private String username;
