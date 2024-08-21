@@ -1,6 +1,5 @@
 package com.kimyoungjo.spring_boot_first_practice.controller;
 
-import com.kimyoungjo.spring_boot_first_practice.dto.CustomDataDTO;
 import com.kimyoungjo.spring_boot_first_practice.entity.CustomData;
 import com.kimyoungjo.spring_boot_first_practice.service.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
