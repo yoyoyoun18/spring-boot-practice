@@ -28,7 +28,7 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(csrf -> csrf.disable())  // CSRF 보호 비활성화 (개발 환경에서만 사용)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/signup", "/").permitAll()  // signup 엔드포인트는 모든 요청 허용
+                        .requestMatchers("/signup", "/", "/test").permitAll()  // signup 엔드포인트는 모든 요청 허용
                         .anyRequest().authenticated()  // 다른 모든 요청은 인증 필요
                 );
         return http.build();
